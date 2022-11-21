@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "RegisterServlet", value = "/RegisterServlet")
+@WebServlet(name = "RegisterServlet", value = "/register")
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("register.jsp").forward(request, response);
     }
 
     @Override
@@ -20,7 +20,6 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
-
 
     }
 }

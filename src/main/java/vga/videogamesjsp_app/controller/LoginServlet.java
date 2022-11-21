@@ -13,15 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet(name = "LoginServlet", value = "/login")
+@WebServlet(name = "LoginServlet", value = "/Login")
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         if (session.getAttribute("user") != null){
-            response.sendRedirect("/games");
+            response.sendRedirect("/Games");
         }
         else{
             request.getRequestDispatcher("login.jsp").forward(request, response);
@@ -30,14 +29,18 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(true);
         User u = UserDAO.instance.checkPassword(
                 request.getParameter("email"),
                 request.getParameter("password")
         );
         if (u != null){
             session.setAttribute("user", u);
+            response.sendRedirect("/Games");
         }
-        response.sendRedirect("/games");
+        else {
+            request.setAttribute("error", "Incorrect email or password. Please try again.");
+            request.getRequestDispatcher("login.jps").forward(request, response);
+        }
     }
 }

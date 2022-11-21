@@ -9,16 +9,35 @@
 --%>
 <html>
 <head>
-    <title>Title</title>
+  <title>Login</title>
+  <link href="resources/bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="resources/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-  <h1><c:out value="${sessionScope.user.name}"/></h1>
-  <form action="${pageContext.request.contextPath}/login" method="post">
-    <label for="email"></label>
-    <input type="email" name="email" id="email">
-    <label for="password"></label>
-    <input type="password" name="password" id="password">
-    <button type="submit">Login</button>
-  </form>
+<body class="bg-info">
+  <div class="d-flex flex-column justify-content-center h-100">
+    <div class="d-flex flex-row justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <%--  <img src="..." class="card-img-top" alt="...">--%>
+        <div class="card-body">
+          <h5 class="card-title">Login</h5>
+          <form action="${pageContext.request.contextPath}/login" method="post" class="">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" class="form-control">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" class="form-control">
+            </div>
+            <br>
+            <div class="d-flex flex-column justify-content-center">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -20,28 +20,30 @@
         }
     </style>
 </head>
-<body>
-    <h1><c:out value="${sessionScope.user.name}" /> </h1>
-    <div class="row">
-        <c:forEach items="${games}" var="game">
-        <div class="card col-6 m-1" style="width: 18rem;">
-    <%--        <img class="card-img-top" src="" alt="Card image cap">--%>
-            <div class="card-body">
-                <h5 class="card-title"><c:out value="${game.title}" /></h5>
-                <p class="card-text"><c:out value="${game.description}" /></p>
-                <a href="./games/<c:out value="${game.user_id}" />" class="btn btn-primary">More Details</a>
-                <a href="<c:out value="${game.link}" />" class="btn btn-secondary">Visit Website</a>
+<body class="bg-info">
+    <c:import url="navbar.jsp"/>
+    <div class="bg-body">
+        <div class="row">
+            <c:forEach items="${games}" var="game">
+            <div class="card col-6 m-1" style="width: 18rem;">
+        <%--        <img class="card-img-top" src="" alt="Card image cap">--%>
+                <div class="card-body">
+                    <h5 class="card-title"><c:out value="${game.title}" /></h5>
+                    <p class="card-text"><c:out value="${game.description}" /></p>
+                    <a href="./games/<c:out value="${game.user_id}" />" class="btn btn-primary">More Details</a>
+                    <a href="<c:out value="${game.link}" />" class="btn btn-secondary">Visit Website</a>
+                </div>
+            <div class="card-footer row">
+                <c:forEach begin="1" end="${game.rating}" step="1">
+                    <div class="col-1"><span class="fa fa-star checked"></span></div>
+                </c:forEach>
+                <c:forEach begin="1" end="${6 - game.rating}" step="1">
+                    <div class="col-1"><span class="fa fa-star"></span></div>
+                </c:forEach>
             </div>
-        <div class="card-footer row">
-            <c:forEach begin="1" end="${game.rating}" step="1">
-                <div class="col-1"><span class="fa fa-star checked"></span></div>
-            </c:forEach>
-            <c:forEach begin="1" end="${6 - game.rating}" step="1">
-                <div class="col-1"><span class="fa fa-star"></span></div>
+            </div>
             </c:forEach>
         </div>
-        </div>
-        </c:forEach>
     </div>
 </body>
 </html>
