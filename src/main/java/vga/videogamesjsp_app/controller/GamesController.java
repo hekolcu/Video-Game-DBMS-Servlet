@@ -15,9 +15,16 @@ import java.util.List;
 public class GamesController extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        List<Game> games = GameDAO.instance.getGames();
-        request.setAttribute("games", games);
-        request.getRequestDispatcher("Games.jsp").forward(request, response);
+        String id_string = request.getParameter("id");
+        if (id_string != null){
+            int id = Integer.parseInt(id_string);
+            request.setAttribute("game", GameDAO.instance.getGame(id));
+            request.getRequestDispatcher("game.jsp").forward(request, response);
+        }
+        else {
+            request.setAttribute("games", GameDAO.instance.getGames());
+            request.getRequestDispatcher("games.jsp").forward(request, response);
+        }
     }
 
     public void destroy() {

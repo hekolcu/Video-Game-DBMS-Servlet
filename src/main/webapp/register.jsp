@@ -23,23 +23,25 @@
                     <form>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name"/>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" readonly placeholder="Password">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="password-reentered">Password</label>
-                            <input type="password" class="form-control" id="password-reentered" readonly placeholder="Re-Enter Password">
+                            <input type="password" class="form-control" id="password-reentered" placeholder="Re-Enter Password">
                         </div>
                         <br>
-                        <a href="${pageContext.request.contextPath}/games" class="btn btn-secondary">Cancel</a>
-                        <button type="submit" class="btn btn-danger">Submit</button>
+                        <div class="d-flex flex-row justify-content-between">
+                            <a href="${pageContext.request.contextPath}/games" class="btn btn-secondary">Cancel</a>
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

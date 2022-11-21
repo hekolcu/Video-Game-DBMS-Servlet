@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", value = "/Login")
+@WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         if (session.getAttribute("user") != null){
-            response.sendRedirect("/Games");
+            response.sendRedirect("/games");
         }
         else{
             request.getRequestDispatcher("login.jsp").forward(request, response);
@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
         );
         if (u != null){
             session.setAttribute("user", u);
-            response.sendRedirect("/Games");
+            response.sendRedirect("/games");
         }
         else {
             request.setAttribute("error", "Incorrect email or password. Please try again.");

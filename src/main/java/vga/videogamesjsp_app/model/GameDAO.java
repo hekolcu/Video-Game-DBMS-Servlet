@@ -31,25 +31,7 @@ public enum GameDAO {
             stmt = this.con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM GAME");
             while (rs.next()) {
-                gameArrayList.add(
-                        new Game(
-                                rs.getInt("USER_ID"),
-                                rs.getInt("GAME_ID"),
-                                rs.getString("TITLE"),
-                                rs.getString("DESCRIPTION"),
-                                rs.getInt("YEAR"),
-                                rs.getString("GENRE"),
-                                rs.getString("POPULARITY"),
-                                rs.getString("PLATFORM"),
-                                rs.getString("MODE"),
-                                rs.getString("RESTRICTIONS"),
-                                rs.getString("REQUIREMENTS"),
-                                rs.getString("LINK"),
-                                rs.getString("CREATORS"),
-                                rs.getFloat("RATING"),
-                                rs.getInt("RATING_COUNT")
-                        )
-                );
+                gameArrayList.add(resultSetToGame(rs));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -57,4 +39,37 @@ public enum GameDAO {
         return gameArrayList;
     }
 
+    public Game getGame(int id) {
+        try {
+            PreparedStatement pstmt = this.con.prepareStatement("SELECT * FROM GAME WHERE GAME_ID = ?");
+            pstmt.setInt(1, id);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return resultSetToGame(rs);
+            }
+        } catch (SQLException e){
+
+        }
+        return null;
+    }
+
+    private Game resultSetToGame(ResultSet rs) throws SQLException {
+        return new Game(
+                rs.getInt("USER_ID"),
+                rs.getInt("GAME_ID"),
+                rs.getString("TITLE"),
+                rs.getString("DESCRIPTION"),
+                rs.getInt("YEAR"),
+                rs.getString("GENRE"),
+                rs.getString("POPULARITY"),
+                rs.getString("PLATFORM"),
+                rs.getString("MODE"),
+                rs.getString("RESTRICTIONS"),
+                rs.getString("REQUIREMENTS"),
+                rs.getString("LINK"),
+                rs.getString("CREATORS"),
+                rs.getFloat("RATING"),
+                rs.getInt("RATING_COUNT")
+        );
+    }
 }

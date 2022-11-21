@@ -16,22 +16,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .checked {
-            color: orange;
+            color: gold;
         }
     </style>
 </head>
 <body class="bg-info">
     <c:import url="navbar.jsp"/>
-    <div class="bg-body">
+    <div class="bg-info">
         <div class="row">
             <c:forEach items="${games}" var="game">
             <div class="card col-6 m-1" style="width: 18rem;">
         <%--        <img class="card-img-top" src="" alt="Card image cap">--%>
                 <div class="card-body">
-                    <h5 class="card-title"><c:out value="${game.title}" /></h5>
+                    <h5 class="card-title"><a class="text-decoration-none" href="./games?id=<c:out value="${game.game_id}" />"><c:out value="${game.title}" /></a></h5>
                     <p class="card-text"><c:out value="${game.description}" /></p>
-                    <a href="./games/<c:out value="${game.user_id}" />" class="btn btn-primary">More Details</a>
-                    <a href="<c:out value="${game.link}" />" class="btn btn-secondary">Visit Website</a>
+<%--                    <a href="./games?id=<c:out value="${game.game_id}" />" class="btn btn-primary card-text">More Details</a>--%>
+                    <a href="<c:out value="${game.link}" />" class="btn btn-secondary card-text" target="_blank">Visit Website</a>
                 </div>
             <div class="card-footer row">
                 <c:forEach begin="1" end="${game.rating}" step="1">

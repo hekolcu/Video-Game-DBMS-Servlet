@@ -28,7 +28,7 @@ SET FILES NIO TRUE
 SET FILES NIO SIZE 256
 SET FILES LOG TRUE
 SET FILES LOG SIZE 50
-SET FILES CHECK 426
+SET FILES CHECK 851
 SET DATABASE COLLATION "SQL_TEXT" PAD SPACE
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
@@ -50,4 +50,4 @@ INSERT INTO BLOCKS VALUES(0,2147483647,0)
 SET SCHEMA PUBLIC
 INSERT INTO GAME VALUES(0,1,'Counter Strike Global Offensive','A first person multiplayer shooter game',2000,'First Person Shooting','2 million active players','Steam/PC','Online Multiplayer','18+','2.5 GHz 2 Core processor, 4 GB RAM, 1GB Graphics card','https://www.counter-strike.net','Jess Cliffe',4.23,302)
 INSERT INTO GAME VALUES(1,2,'Pok\u00e9mon Red/Green','Pok\u00e9mon is a Japanese media franchise managed by The Pok\u00e9mon Company',1996,'Adventure;Role-playing (RPG)','Not Very Active','Nintendo 3DS;Game Boy','Singleplayer;Multiplayer','13+','NA','https://www.pokemon.com/','Satoshi Tajiri;Ken Sugimori;Junichi Masuda',4.10,982)
-INSERT INTO USER VALUES(0,'hekolcu@gmail.com','d7ebf01194fffe1766f725e2da499816a546250069c9e19af1dbdc06bb67c8a1','Huseyin Emre Kolcu')
+INSERT INTO USER VALUES(0,'hekolcu@gmail.com','3C7C38B6D5CDDB6F4FFD95E8B7FDF04FB4B3300273BE3BA7D4EAD815751E7A45','Huseyin Emre Kolcu')

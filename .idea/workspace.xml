@@ -10,20 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d42341-b0ca-465d-88a4-176159525260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/ProfileServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery-dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/game.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/games.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/games.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/games.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/games.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/games.script" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GamesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Games.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Games.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/ProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/GameDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Games.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/games.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +196,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668979649533</updated>
       <workItem from="1668979650842" duration="2669000" />
-      <workItem from="1669024342002" duration="15590000" />
+      <workItem from="1669024342002" duration="19407000" />
     </task>
     <servers />
   </component>
