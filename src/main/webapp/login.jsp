@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-  <form action="${pageContext.request.contextPath}/" method="post">
+  <form action="${pageContext.request.contextPath}/login" method="post">
     <label for="email"></label>
     <input type="email" name="email" id="email">
     <label for="password"></label>

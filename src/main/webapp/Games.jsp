@@ -1,4 +1,4 @@
-<%@ page import="com.example.servletproject1.model.Game" %>
+<%@ page import="vga.videogamesjsp_app.model.Game" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -7,7 +7,7 @@
   Time: 21:21
   To change this template use File | Settings | File Templates.
 --%>
-<jsp:useBean id="games" scope="request" type="java.util.List<com.example.servletproject1.model.Game>"/>
+<jsp:useBean id="games" scope="request" type="java.util.List<vga.videogamesjsp_app.model.Game>"/>
 <html>
 <head>
     <title>Games</title>
@@ -36,7 +36,7 @@
             <c:forEach begin="1" end="${game.rating}" step="1">
                 <div class="col-1"><span class="fa fa-star checked"></span></div>
             </c:forEach>
-            <c:forEach begin="1" end="${5 - game.rating}" step="1">
+            <c:forEach begin="1" end="${6 - game.rating}" step="1">
                 <div class="col-1"><span class="fa fa-star"></span></div>
             </c:forEach>
         </div>

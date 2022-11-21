@@ -1,4 +1,4 @@
-package com.example.servletproject1;
+package vga.videogamesjsp_app;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

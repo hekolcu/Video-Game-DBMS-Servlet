@@ -1,6 +1,6 @@
-package com.example.servletproject1.model;
+package vga.videogamesjsp_app.model;
 
-import com.example.servletproject1.ServletHash;
+import vga.videogamesjsp_app.ServletHash;
 
 import java.sql.*;
 

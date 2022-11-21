@@ -1,4 +1,4 @@
-package com.example.servletproject1.model;
+package vga.videogamesjsp_app.model;
 
 import java.sql.*;
 import java.util.ArrayList;

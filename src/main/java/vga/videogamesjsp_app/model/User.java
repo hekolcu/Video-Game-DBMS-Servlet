@@ -1,4 +1,4 @@
-package com.example.servletproject1.model;
+package vga.videogamesjsp_app.model;
 
 public class User {
     private int id;

@@ -1,13 +1,15 @@
-package com.example.servletproject1.controller;
+package vga.videogamesjsp_app.controller;
 
-import com.example.servletproject1.model.Game;
-import com.example.servletproject1.model.GameDAO;
+import vga.videogamesjsp_app.model.Game;
+import vga.videogamesjsp_app.model.GameDAO;
 
-import java.io.*;
-import java.util.List;
 import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "GamesController", value = "/games")
 public class GamesController extends HttpServlet {

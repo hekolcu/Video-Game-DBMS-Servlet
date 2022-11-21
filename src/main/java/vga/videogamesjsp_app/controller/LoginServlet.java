@@ -1,14 +1,20 @@
-package com.example.servletproject1.controller;
+package vga.videogamesjsp_app.controller;
 
-import com.example.servletproject1.model.User;
-import com.example.servletproject1.model.UserDAO;
+import vga.videogamesjsp_app.model.Game;
+import vga.videogamesjsp_app.model.GameDAO;
+import vga.videogamesjsp_app.model.User;
+import vga.videogamesjsp_app.model.UserDAO;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "LoginServlet", value = "/")
+@WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,7 +30,8 @@ public class LoginServlet extends HttpServlet {
         if (u != null){
             session.setAttribute("user", u);
         }
-
+        List<Game> games = GameDAO.instance.getGames();
+        request.setAttribute("games", games);
         request.getRequestDispatcher("Games.jsp").forward(request, response);
     }
 }
