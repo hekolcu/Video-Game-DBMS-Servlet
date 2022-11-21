@@ -10,22 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d42341-b0ca-465d-88a4-176159525260" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.lck" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.log" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.script" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/ServletHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/ServletHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GamesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/GameDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Games.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Games.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +35,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3d2d6d40-eb77-40ad-9974-96c770656537" />
+        <option name="url" value="https://github.com/hekolcu/Video-Game-DBMS-Servlet" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -65,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/husey/Desktop/VideoGamesJSP_App",
+    "last_opened_file_path": "C:/Users/husey/Desktop/ServletProject1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +74,11 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "hsqldb"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -184,7 +190,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668979649533</updated>
       <workItem from="1668979650842" duration="2669000" />
-      <workItem from="1669024342002" duration="624000" />
+      <workItem from="1669024342002" duration="4375000" />
     </task>
     <servers />
   </component>

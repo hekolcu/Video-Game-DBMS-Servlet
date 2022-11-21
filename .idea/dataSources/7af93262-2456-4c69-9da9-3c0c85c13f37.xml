@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="HSQLDB (Local)">
+  <database-model serializer="dbm" dbms="HSQLDB" family-id="HSQLDB" format-version="4.43">
+    <root id="1">
+      <ServerVersion>2.5.1</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="PUBLIC">
+      <Current>1</Current>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="2" name="SYSTEM_LOBS"/>
+    <table id="6" parent="4" name="GAME"/>
+    <table id="7" parent="4" name="USER"/>
+    <column id="8" parent="6" name="GAME_ID">
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="9" parent="6" name="USER_ID">
+      <DataType>INTEGER|4s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="10" parent="6" name="TITLE">
+      <DataType>VARCHAR(64)|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="11" parent="6" name="DESCRIPTION">
+      <DataType>VARCHAR(128)|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="12" parent="6" name="YEAR">
+      <DataType>INTEGER|4s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="13" parent="6" name="GENRE">
+      <DataType>VARCHAR(64)|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="14" parent="6" name="POPULARITY">
+      <DataType>VARCHAR(64)|12s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="15" parent="6" name="PLATFORM">
+      <DataType>VARCHAR(64)|12s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="16" parent="6" name="MODE">
+      <DataType>VARCHAR(64)|12s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="17" parent="6" name="RESTRICTIONS">
+      <DataType>VARCHAR(32)|12s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="18" parent="6" name="REQUIREMENTS">
+      <DataType>VARCHAR(256)|12s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="19" parent="6" name="LINK">
+      <DataType>VARCHAR(128)|12s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="20" parent="6" name="CREATORS">
+      <DataType>VARCHAR(128)|12s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="21" parent="6" name="RATING">
+      <DataType>DECIMAL(4,2)|3s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="22" parent="6" name="RATING_COUNT">
+      <DataType>INTEGER|4s</DataType>
+      <Position>15</Position>
+    </column>
+    <index id="23" parent="6" name="SYS_IDX_SYS_PK_10092_10093">
+      <ColNames>GAME_ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="6" name="SYS_PK_10092">
+      <ColNames>GAME_ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="7" name="ID">
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="26" parent="7" name="EMAIL">
+      <DataType>VARCHAR(128)|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="27" parent="7" name="PASSWORD">
+      <DataType>VARCHAR(128)|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="28" parent="7" name="NAME">
+      <DataType>VARCHAR(128)|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <index id="29" parent="7" name="SYS_IDX_SYS_PK_10096_10098">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <index id="30" parent="7" name="SYS_IDX_SYS_CT_10097_10100">
+      <ColNames>EMAIL</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="7" name="SYS_PK_10096">
+      <ColNames>ID</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <key id="32" parent="7" name="SYS_CT_10097">
+      <ColNames>EMAIL</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+    </key>
+  </database-model>
+</dataSource>
