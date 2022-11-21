@@ -7,7 +7,7 @@ import java.sql.*;
 public enum UserDAO {
     instance;
 
-    private Connection con;
+    private final Connection con;
 
     UserDAO() {
         try {
@@ -27,20 +27,18 @@ public enum UserDAO {
     }
 
     public User checkPassword(String email, String password){
-        PreparedStatement pstmt = null;
         try {
-            pstmt = this.con.prepareStatement("SELECT * FROM USER WHERE email = ? AND password = ?");
+            PreparedStatement pstmt = this.con.prepareStatement("SELECT * FROM USER WHERE email = ? AND password = ?");
             pstmt.setString(1, email);
             pstmt.setString(2, ServletHash.hashPassword(password));
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()){
-                User u = new User(
+                return new User(
                         rs.getInt("ID"),
                         rs.getString("EMAIL"),
                         rs.getString("PASSWORD"),
                         rs.getString("NAME")
                 );
-                return u;
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());

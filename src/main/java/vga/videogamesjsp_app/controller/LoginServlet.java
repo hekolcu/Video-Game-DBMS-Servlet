@@ -1,5 +1,6 @@
 package vga.videogamesjsp_app.controller;
 
+import vga.videogamesjsp_app.ServletHash;
 import vga.videogamesjsp_app.model.Game;
 import vga.videogamesjsp_app.model.GameDAO;
 import vga.videogamesjsp_app.model.User;
@@ -18,20 +19,25 @@ import java.util.List;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        if (session.getAttribute("user") != null){
+            response.sendRedirect("/games");
+        }
+        else{
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
         HttpSession session = request.getSession();
-        User u = UserDAO.instance.checkPassword(email, password);
+        User u = UserDAO.instance.checkPassword(
+                request.getParameter("email"),
+                request.getParameter("password")
+        );
         if (u != null){
             session.setAttribute("user", u);
         }
-        List<Game> games = GameDAO.instance.getGames();
-        request.setAttribute("games", games);
-        request.getRequestDispatcher("Games.jsp").forward(request, response);
+        response.sendRedirect("/games");
     }
 }
