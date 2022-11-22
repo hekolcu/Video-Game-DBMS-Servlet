@@ -11,6 +11,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/profile">Profile(<c:out value="${sessionScope.user.name}" />)</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/logout">Logout</a>
+          </li>
         </c:if>
         <li class="nav-item">
           <a class="nav-link" href="${pageContext.request.contextPath}/games?myGames=true">My Games</a>
