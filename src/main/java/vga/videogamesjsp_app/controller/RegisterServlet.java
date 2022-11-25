@@ -1,5 +1,7 @@
 package vga.videogamesjsp_app.controller;
 
+import vga.videogamesjsp_app.model.UserDAO;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,9 +19,28 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        HttpSession session = request.getSession();
-
+        try {
+            String name = request.getParameter("name").trim();
+            String email = request.getParameter("email").trim();
+            String password = request.getParameter("password").trim();
+            String password_reentered = request.getParameter("password-reentered").trim();
+            if (name.length() > 0 && email.matches("^(.+)@(.+)$") && password.length() >= 4 && password.equals(password_reentered)){
+                request.getSession().setAttribute("user", UserDAO.instance.addUser(name, email, password));
+                response.sendRedirect("/games");
+            }
+            else {
+                throw new Exception();
+            }
+        }
+        catch (NullPointerException e){
+            System.out.println("Null Pointer Exception");
+            request.setAttribute("error", "Missing information");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+        }
+        catch (Exception e){
+            System.out.println("Other error");
+            request.setAttribute("error", "Invalid information");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+        }
     }
 }

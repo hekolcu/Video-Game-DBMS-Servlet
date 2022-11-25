@@ -48,7 +48,49 @@ public enum GameDAO {
                 return resultSetToGame(rs);
             }
         } catch (SQLException e){
+            System.out.println("No game found with id: " + id);
+        }
+        return null;
+    }
 
+    public Game addGame(int user_id, String title, String description, int year, String genre, String popularity, String platform, String mode, String restrictions, String requirements, String link, String creators, Float rating, int rating_count){
+        try {
+            PreparedStatement pstmt = this.con.prepareStatement("INSERT INTO GAME(USER_ID, TITLE, DESCRIPTION, YEAR, GENRE, POPULARITY, PLATFORM, MODE, RESTRICTIONS, REQUIREMENTS, LINK, CREATORS, RATING, RATING_COUNT) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            pstmt.setInt(1, user_id);
+            pstmt.setString(2, title);
+            pstmt.setString(3, description);
+            pstmt.setInt(4, year);
+            pstmt.setString(5, genre);
+            pstmt.setString(6, popularity);
+            pstmt.setString(7, platform);
+            pstmt.setString(8, mode);
+            pstmt.setString(9, restrictions);
+            pstmt.setString(10, requirements);
+            pstmt.setString(11, link);
+            pstmt.setString(12, creators);
+            pstmt.setFloat(13, rating);
+            pstmt.setInt(14, rating_count);
+            if (pstmt.execute()) {
+                return new Game(
+                        pstmt.getGeneratedKeys().getInt("ID"),
+                        user_id,
+                        title,
+                        description,
+                        year,
+                        genre,
+                        popularity,
+                        platform,
+                        mode,
+                        restrictions,
+                        requirements,
+                        link,
+                        creators,
+                        rating,
+                        rating_count
+                );
+            }
+        } catch (SQLException e){
+            System.out.println("Game could not be inserted!");
         }
         return null;
     }

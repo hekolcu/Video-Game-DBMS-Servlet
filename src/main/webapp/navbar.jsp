@@ -9,15 +9,25 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <c:if test="${sessionScope.user != null}">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/profile">Profile(<c:out value="${sessionScope.user.name}" />)</a>
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/profile">Profile(<c:out value="${sessionScope.user.name}" />)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/logout">Logout</a>
+            <a class="nav-link" href="${pageContext.request.contextPath}/games?myGames=true">My Games</a>
           </li>
         </c:if>
         <li class="nav-item">
-          <a class="nav-link" href="${pageContext.request.contextPath}/games?myGames=true">My Games</a>
+          <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/addGame">Add a Game</a>
         </li>
+        <c:if test="${sessionScope.user != null}">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/logout">Logout</a>
+        </li>
+        </c:if>
+        <c:if test="${sessionScope.user == null}">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/login">Login</a>
+          </li>
+        </c:if>
 <%--        <li class="nav-item dropdown">--%>
 <%--          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">--%>
 <%--            Dropdown--%>

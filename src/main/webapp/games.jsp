@@ -20,14 +20,22 @@
             color: gold;
         }
         .grid-item {
-            width: 200px;
+            width: 300px;
+        }
+        .grid {
+            margin: 0 auto;
+        }
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
         }
     </style>
 </head>
-<body class="bg-info">
+<body class="bg-dark">
     <c:import url="navbar.jsp"/>
     <br>
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 300, "fitWidth": true }'>
         <c:forEach items="${games}" var="game">
             <div class="grid-item">
                 <div class="card ms-2 mb-2">
@@ -42,7 +50,7 @@
                             <c:forEach begin="1" end="${game.rating}" step="1">
                                 <div class="p-1"><span class="fa fa-star checked"></span></div>
                             </c:forEach>
-                            <c:forEach begin="1" end="${6 - game.rating}" step="1">
+                            <c:forEach begin="1" end="${5 - Math.round(game.rating)}" step="1">
                                 <div class="p-1"><span class="fa fa-star"></span></div>
                             </c:forEach>
                         </div>

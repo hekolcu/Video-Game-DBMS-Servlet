@@ -14,9 +14,9 @@
   <link href="resources/bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="resources/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="bg-info">
+<body class="bg-dark">
   <div class="h-100 w-100 d-flex flex-column justify-content-center">
-    <h1 class="text-center">
+    <h1 class="text-center text-danger">
     <c:out value="${error}"/></h1>
     <div class="d-flex w-100 justify-content-center">
       <a href="${pageContext.request.contextPath}/login" class="btn btn-secondary">Login</a>

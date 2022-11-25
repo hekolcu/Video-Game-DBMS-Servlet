@@ -45,4 +45,25 @@ public enum UserDAO {
         }
         return null;
     }
+
+    public User addUser(String name, String email, String password){
+        try {
+            String hashed_password = ServletHash.hashPassword(password);
+            PreparedStatement pstmt = this.con.prepareStatement("INSERT INTO USER(NAME, EMAIL, PASSWORD) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            pstmt.setString(1, name);
+            pstmt.setString(2, email);
+            pstmt.setString(3, hashed_password);
+            if (pstmt.execute()){
+                return new User(
+                        pstmt.getGeneratedKeys().getInt("ID"),
+                        email,
+                        password,
+                        name
+                );
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
 }

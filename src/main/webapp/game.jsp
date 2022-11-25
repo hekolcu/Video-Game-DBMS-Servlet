@@ -20,9 +20,9 @@
         }
     </style>
 </head>
-<body class="bg-info h-100">
+<body class="bg-dark h-100">
     <c:import url="navbar.jsp"/>
-    <div class="d-flex flex-column justify-content-center mh-100 m-5">
+    <div class="d-flex flex-column justify-content-center mh-100 m-2">
         <div class="d-flex flex-row justify-content-center">
             <div class="card" style="width: 36rem;">
     <%--            <img src="" class="card-img-top" alt="...">--%>

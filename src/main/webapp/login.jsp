@@ -13,7 +13,7 @@
   <link href="resources/bootstrap-5.2.2-dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="resources/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="bg-info">
+<body class="bg-dark">
   <div class="d-flex flex-column justify-content-center h-100">
     <div class="d-flex flex-row justify-content-center">
       <div class="card" style="width: 18rem;">
@@ -33,6 +33,8 @@
             <br>
             <div class="d-flex flex-column justify-content-center">
               <button type="submit" class="btn btn-primary">Login</button>
+              <h4 class="text-center fw-light m-1">OR</h4>
+              <a class="btn btn-danger " href="${pageContext.request.contextPath}/register">Register</a>
             </div>
           </form>
         </div>

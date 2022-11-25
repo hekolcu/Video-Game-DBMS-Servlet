@@ -15,7 +15,7 @@
     <script src="resources/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="resources/js/jquery-dev.js"></script>
 </head>
-<body class="bg-info h-100">
+<body class="bg-dark h-100">
     <c:import url="navbar.jsp"/>
     <div class="d-flex flex-column justify-content-center h-75">
         <div class="d-flex flex-row justify-content-center">
@@ -37,9 +37,11 @@
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" readonly placeholder="Password">
                         </div>
-                        <button type="button" class="btn btn-secondary" id="editBtn">Edit</button>
-                        <button type="button" class="btn btn-secondary d-none" id="cancelBtn">Cancel</button>
-                        <button type="submit" class="btn btn-danger d-none" id="submitBtn">Submit</button>
+                        <div class="d-flex flex-row justify-content-between mt-2">
+                            <button type="button" class="btn btn-secondary" id="editBtn">Edit</button>
+                            <button type="button" class="btn btn-secondary d-none" id="cancelBtn">Cancel</button>
+                            <button type="submit" class="btn btn-danger d-none" id="submitBtn">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

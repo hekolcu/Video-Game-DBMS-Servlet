@@ -29,7 +29,7 @@
       <Position>3</Position>
     </column>
     <column id="11" parent="6" name="DESCRIPTION">
-      <DataType>VARCHAR(128)|12s</DataType>
+      <DataType>VARCHAR(750)|12s</DataType>
       <Position>4</Position>
     </column>
     <column id="12" parent="6" name="YEAR">
@@ -53,11 +53,11 @@
       <Position>9</Position>
     </column>
     <column id="17" parent="6" name="RESTRICTIONS">
-      <DataType>VARCHAR(32)|12s</DataType>
+      <DataType>VARCHAR(64)|12s</DataType>
       <Position>10</Position>
     </column>
     <column id="18" parent="6" name="REQUIREMENTS">
-      <DataType>VARCHAR(256)|12s</DataType>
+      <DataType>VARCHAR(512)|12s</DataType>
       <Position>11</Position>
     </column>
     <column id="19" parent="6" name="LINK">

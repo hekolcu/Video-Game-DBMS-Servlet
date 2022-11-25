@@ -2,6 +2,7 @@ package vga.videogamesjsp_app.controller;
 
 import vga.videogamesjsp_app.model.Game;
 import vga.videogamesjsp_app.model.GameDAO;
+import vga.videogamesjsp_app.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,6 +28,8 @@ public class GamesController extends HttpServlet {
         }
     }
 
-    public void destroy() {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendRedirect("");
     }
 }
