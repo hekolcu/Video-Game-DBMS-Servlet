@@ -39,6 +39,21 @@ public enum GameDAO {
         return gameArrayList;
     }
 
+    public ArrayList<Game> getGames(int id) {
+        ArrayList<Game> gameArrayList = new ArrayList<>();
+        try {
+            PreparedStatement pstmt = this.con.prepareStatement("SELECT * FROM GAME WHERE USER_ID = ?");
+            pstmt.setInt(1, id);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                gameArrayList.add(resultSetToGame(rs));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return gameArrayList;
+    }
+
     public Game getGame(int id) {
         try {
             PreparedStatement pstmt = this.con.prepareStatement("SELECT * FROM GAME WHERE GAME_ID = ?");

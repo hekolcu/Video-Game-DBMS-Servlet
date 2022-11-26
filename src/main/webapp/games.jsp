@@ -1,4 +1,5 @@
 <%@ page import="vga.videogamesjsp_app.model.Game" %>
+<%@ page import="java.lang.Math" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -50,7 +51,7 @@
                             <c:forEach begin="1" end="${game.rating}" step="1">
                                 <div class="p-1"><span class="fa fa-star checked"></span></div>
                             </c:forEach>
-                            <c:forEach begin="1" end="${5 - Math.round(game.rating)}" step="1">
+                            <c:forEach begin="1" end="${5 - Math.ceil(game.rating)}" step="1">
                                 <div class="p-1"><span class="fa fa-star"></span></div>
                             </c:forEach>
                         </div>

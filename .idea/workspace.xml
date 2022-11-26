@@ -10,26 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d42341-b0ca-465d-88a4-176159525260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/AddGameServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addGame.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7af93262-2456-4c69-9da9-3c0c85c13f37.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7af93262-2456-4c69-9da9-3c0c85c13f37.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GameRatingServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/games.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/games.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/games.script" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.script" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GamesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/RegisterServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/GameDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/model/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/game.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/game.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/games.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/games.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/logout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +192,7 @@
       <workItem from="1669115442266" duration="6165000" />
       <workItem from="1669127741957" duration="4865000" />
       <workItem from="1669292982561" duration="15746000" />
+      <workItem from="1669473468109" duration="1388000" />
     </task>
     <servers />
   </component>

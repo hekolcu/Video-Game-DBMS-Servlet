@@ -23,8 +23,14 @@ public class GamesController extends HttpServlet {
             request.getRequestDispatcher("game.jsp").forward(request, response);
         }
         else {
-            request.setAttribute("games", GameDAO.instance.getGames());
-            request.getRequestDispatcher("games.jsp").forward(request, response);
+            if (request.getParameter("myGames") == null) {
+                request.setAttribute("games", GameDAO.instance.getGames());
+                request.getRequestDispatcher("games.jsp").forward(request, response);
+            }
+            else {
+                request.setAttribute("games", GameDAO.instance.getGames(((User) request.getSession().getAttribute("user")).getId()));
+                request.getRequestDispatcher("games.jsp").forward(request, response);
+            }
         }
     }
 
