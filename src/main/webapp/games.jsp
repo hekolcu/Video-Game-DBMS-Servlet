@@ -1,5 +1,5 @@
-<%@ page import="vga.videogamesjsp_app.model.Game" %>
 <%@ page import="java.lang.Math" %>
+<%@ page import="vga.videogamesjsp_app.model.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -9,6 +9,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <jsp:useBean id="games" scope="request" type="java.util.List<vga.videogamesjsp_app.model.Game>"/>
+<c:if test="${sessionScope.user != null}">
+<jsp:useBean id="user" scope="session" type="vga.videogamesjsp_app.model.User"/>
+</c:if>
 <html>
 <head>
     <title>Games</title>
@@ -45,6 +48,9 @@
                         <p class="card-text"><c:out value="${game.description}" /></p>
                             <%--                    <a href="./games?id=<c:out value="${game.game_id}" />" class="btn btn-primary card-text">More Details</a>--%>
                         <a href="<c:out value="${game.link}" />" class="btn btn-secondary card-text" target="_blank">Visit Website</a>
+                        <c:if test="${sessionScope.user != null && user.id == game.user_id}">
+                            <a href="./editGame?id=<c:out value="${game.game_id}" />" class="btn btn-secondary card-text" target="_blank">Edit</a>
+                        </c:if>
                     </div>
                     <div class="card-footer">
                         <div class="d-flex flex-row justify-content-lg-start">
