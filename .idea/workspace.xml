@@ -10,15 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84d42341-b0ca-465d-88a4-176159525260" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/vga/videogamesjsp_app/controller/GameEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/editGame.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/games.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/games.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/games.script" beforeDir="false" afterPath="$PROJECT_DIR$/db/games.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/games.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/games.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +190,8 @@
       <workItem from="1669127741957" duration="4865000" />
       <workItem from="1669292982561" duration="15746000" />
       <workItem from="1669473468109" duration="2593000" />
+      <workItem from="1670273099026" duration="61000" />
+      <workItem from="1670351855499" duration="2848000" />
     </task>
     <servers />
   </component>
